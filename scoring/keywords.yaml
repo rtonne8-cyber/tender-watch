@@ -1,0 +1,44 @@
+# T&D (transmission & distribution) sector relevance allowlist.
+# Starter set built from domain knowledge — no source spec was available to
+# carry these over from; tune freely as real data comes through.
+
+cpv_allowlist:
+  - "45232220"  # Ancillary works for electricity transmission lines
+  - "45231400"  # Construction work for electricity power lines
+  - "45315300"  # Electricity supply installations
+  - "65300000"  # Electricity distribution and related services
+  - "65310000"  # Electricity distribution
+  - "31200000"  # Electricity distribution and control apparatus
+  - "31170000"  # Transformers
+  - "31214500"  # Switchgear
+  - "71323100"  # Engineering design services for electrical installations
+
+keywords:
+  - "substation"
+  - "switchgear"
+  - "transmission line"
+  - "transmission network"
+  - "distribution network"
+  - "grid connection"
+  - "overhead line"
+  - "underground cable"
+  - "cable route"
+  - "gas[- ]insulated switchgear"
+  - "\\bGIS\\b"
+  - "\\bEHV\\b"
+  - "\\bHVDC\\b"
+  - "\\bHV\\b"
+  - "battery storage"
+  - "BESS"
+  - "primary plant"
+  - "secondary plant"
+  - "\\bDNO\\b"
+  - "132kV"
+  - "275kV"
+  - "400kV"
+  - "11kV"
+  - "33kV"
+  - "protection relay"
+  - "RIIO"
+  - "OFGEM"
+  - "national grid"

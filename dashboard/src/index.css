@@ -1,0 +1,17 @@
+:root {
+  --tw-green: #00ab61;
+  --tw-teal: #009a9b;
+  --tw-stone: #b2b1a7;
+  --tw-ink: #1f2421;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f6f4;
+  color: var(--tw-ink);
+}
