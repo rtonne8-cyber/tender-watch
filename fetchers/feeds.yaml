@@ -1,0 +1,13 @@
+# Tier 3 signal sources — trade-press RSS, signals only, never confirmed notices.
+# Current± is discontinued (redirects to a JS-rendered site with no RSS as of
+# June 2026); Energy Live News substitutes for it.
+
+feeds:
+  - name: utility_week
+    url: "https://utilityweek.co.uk/feed/"
+  - name: renews
+    url: "https://www.renews.biz/feed/"
+  - name: utility_dive
+    url: "https://www.utilitydive.com/feeds/news/"
+  - name: energy_live_news
+    url: "https://www.energylivenews.com/feed/"

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import SignalsFeed from "./SignalsFeed.jsx";
 
 const SOURCE_LABELS = {
   find_a_tender: "Find a Tender",
@@ -72,6 +73,8 @@ export default function App() {
           </tbody>
         </table>
       )}
+
+      <SignalsFeed />
     </div>
   );
 }

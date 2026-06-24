@@ -19,15 +19,18 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Run fetchers + scoring
+      - name: Run Tier 1/2 fetchers + scoring
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python run.py
+
+      - name: Run Tier 3 signal fetchers
+        run: python run_signals.py
 
       - name: Commit updated data
         run: |
           git config user.name "tenderwatch-bot"
           git config user.email "actions@github.com"
-          git add data/tenders.json
+          git add data/tenders.json data/signals.json
           git diff --cached --quiet || git commit -m "chore: refresh tender data"
           git push
