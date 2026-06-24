@@ -26,19 +26,30 @@ KEYWORD_MATCH_SCORE_FLOOR = 40  # ambiguous band floor before the Haiku gate
 KEYWORDS_PATH = Path(__file__).parent / "keywords.yaml"
 
 
+DEFAULT_SECTOR = "General T&D"
+
+
 def _load_keywords():
     with open(KEYWORDS_PATH, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
     cpv_allowlist = set(data.get("cpv_allowlist", []))
     patterns = [re.compile(p, re.IGNORECASE) for p in data.get("keywords", [])]
-    return cpv_allowlist, patterns
+    cpv_sectors = data.get("cpv_sectors", {})
+    return cpv_allowlist, patterns, cpv_sectors
 
 
-_CPV_ALLOWLIST, _KEYWORD_PATTERNS = _load_keywords()
+_CPV_ALLOWLIST, _KEYWORD_PATTERNS, _CPV_SECTORS = _load_keywords()
 
 
 def _cpv_match(record):
     return bool(_CPV_ALLOWLIST.intersection(record.get("cpv_codes") or []))
+
+
+def _sector_for(record):
+    for cpv in record.get("cpv_codes") or []:
+        if cpv in _CPV_SECTORS:
+            return _CPV_SECTORS[cpv]
+    return DEFAULT_SECTOR
 
 
 def _keyword_match(record):
@@ -99,6 +110,7 @@ def score_records(records, anthropic_api_key=None):
         else:
             continue  # not relevant, discard
 
+        record["sector"] = _sector_for(record)
         record["scored_at"] = now
         scored.append(record)
 

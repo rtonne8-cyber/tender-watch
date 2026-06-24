@@ -70,6 +70,13 @@
     "published_date": "Wed, 24 Jun 2026 09:00:09 +0000"
   },
   {
+    "id": "utility_dive-3e5ff7e0a3ad",
+    "source": "utility_dive",
+    "headline": "3 home energy providers offer 16.8 GW of distributed capacity to utilities, hyperscalers",
+    "link": "https://www.utilitydive.com/news/3-home-energy-providers-offer-168-gw-of-distributed-capacity-to-utilities/823676/",
+    "published_date": "Wed, 24 Jun 2026 13:13:02 -0400"
+  },
+  {
     "id": "utility_dive-1c69c40ebf61",
     "source": "utility_dive",
     "headline": "Platte River, EnergyHub partner to deploy 39-MW Colorado VPP",
@@ -86,7 +93,7 @@
   {
     "id": "utility_dive-200d2145e83d",
     "source": "utility_dive",
-    "headline": "Grid operators make ‘significant progress’ on generator interconnection reform: AEU",
+    "headline": "Grid operators making ‘significant progress’ on generator interconnection reform: AEU",
     "link": "https://www.utilitydive.com/news/generator-interconnection-reform-ferc-spp-miso-pjm/823613/",
     "published_date": "Wed, 24 Jun 2026 08:42:26 -0400"
   },
@@ -131,13 +138,6 @@
     "headline": "How much electricity are 202(c) power plants producing? Way less than before.",
     "link": "https://www.utilitydive.com/news/doe-202c-power-plants-centralia-campbell-schahfer/822062/",
     "published_date": "Tue, 23 Jun 2026 09:34:53 -0400"
-  },
-  {
-    "id": "utility_dive-3a6416d609d1",
-    "source": "utility_dive",
-    "headline": "GETs, demand response can ease near-term data center electricity price pressure: report",
-    "link": "https://www.utilitydive.com/news/gets-demand-response-data-center-electricity-prices/823487/",
-    "published_date": "Tue, 23 Jun 2026 08:31:39 -0400"
   },
   {
     "id": "energy_live_news-a83b702f1322",

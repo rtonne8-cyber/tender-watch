@@ -140,7 +140,8 @@
     "url": "https://www.find-tender.service.gov.uk/Notice/054864-2026",
     "score": 90,
     "score_method": "cpv_match",
-    "scored_at": "2026-06-24T08:51:09.013212+00:00"
+    "sector": "Substations & Switchgear",
+    "scored_at": "2026-06-24T17:46:52.273091+00:00"
   },
   {
     "id": "find_a_tender-052513-2026",
@@ -169,7 +170,8 @@
     "url": "https://www.find-tender.service.gov.uk/Notice/052513-2026",
     "score": 90,
     "score_method": "cpv_match",
-    "scored_at": "2026-06-24T08:51:09.013212+00:00"
+    "sector": "Transmission & Distribution Networks",
+    "scored_at": "2026-06-24T17:46:52.273091+00:00"
   },
   {
     "id": "find_a_tender-049902-2026",
@@ -191,7 +193,8 @@
     "url": "https://www.find-tender.service.gov.uk/Notice/049902-2026",
     "score": 90,
     "score_method": "cpv_match",
-    "scored_at": "2026-06-24T08:51:09.013212+00:00"
+    "sector": "Transmission & Distribution Networks",
+    "scored_at": "2026-06-24T17:46:52.273091+00:00"
   },
   {
     "id": "etenders_ie-7585381",
@@ -245,7 +248,8 @@
     "url": "https://ted.europa.eu/en/notice/-/detail/208616-2026",
     "score": 90,
     "score_method": "cpv_match",
-    "scored_at": "2026-06-24T08:51:09.013212+00:00"
+    "sector": "Transmission & Distribution Networks",
+    "scored_at": "2026-06-24T17:46:52.273091+00:00"
   },
   {
     "id": "etenders_ie-7770854",
@@ -268,7 +272,8 @@
     "url": "https://ted.europa.eu/en/notice/-/detail/209872-2026",
     "score": 90,
     "score_method": "cpv_match",
-    "scored_at": "2026-06-24T08:51:09.013212+00:00"
+    "sector": "Engineering & Consultancy",
+    "scored_at": "2026-06-24T17:46:52.273091+00:00"
   },
   {
     "id": "etenders_ie-7712504",
@@ -301,6 +306,7 @@
     "url": "https://ted.europa.eu/en/notice/-/detail/226319-2026",
     "score": 90,
     "score_method": "cpv_match",
-    "scored_at": "2026-06-24T08:51:09.013212+00:00"
+    "sector": "Engineering & Consultancy",
+    "scored_at": "2026-06-24T17:46:52.273091+00:00"
   }
 ]

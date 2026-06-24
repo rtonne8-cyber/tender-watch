@@ -13,6 +13,19 @@ cpv_allowlist:
   - "31214500"  # Switchgear
   - "71323100"  # Engineering design services for electrical installations
 
+# Sector label per CPV code, looked up against a scored record's cpv_codes.
+# Records with no CPV match (keyword/Haiku gated) fall back to "General T&D".
+cpv_sectors:
+  "45232220": "Transmission & Distribution Networks"
+  "45231400": "Transmission & Distribution Networks"
+  "65300000": "Transmission & Distribution Networks"
+  "65310000": "Transmission & Distribution Networks"
+  "45315300": "Substations & Switchgear"
+  "31200000": "Substations & Switchgear"
+  "31170000": "Substations & Switchgear"
+  "31214500": "Substations & Switchgear"
+  "71323100": "Engineering & Consultancy"
+
 keywords:
   - "substation"
   - "switchgear"
