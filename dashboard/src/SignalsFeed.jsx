@@ -3,8 +3,8 @@ import { filterSignals } from "./filters.js";
 
 const SOURCE_LABELS = {
   utility_week: "Utility Week",
-  renews: "reNEWS",
-  utility_dive: "Utility Dive",
+  electric_ie: "electric.ie",
+  businessgreen: "BusinessGreen",
   energy_live_news: "Energy Live News",
 };
 

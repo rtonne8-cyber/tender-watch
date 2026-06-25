@@ -1,14 +1,19 @@
 # Tier 3 signal sources — trade-press RSS, signals only, never confirmed notices.
-# Current± is discontinued (redirects to a JS-rendered site with no RSS as of
-# June 2026); Energy Live News substitutes for it.
+# UK & Ireland scoped only (not Europe/global). Current± is discontinued
+# (redirects to a JS-rendered site with no RSS as of June 2026); Energy Live
+# News substitutes for it. reNEWS and Utility Dive were swapped out — both
+# are global/US trade press, not UK/Ireland-scoped, and were producing
+# false-positive matches on foreign stories (e.g. German BESS/wind farm
+# news). electric.ie adds genuine Irish electrical-industry coverage, which
+# none of the original 4 feeds had at all.
 
 feeds:
   - name: utility_week
     url: "https://utilityweek.co.uk/feed/"
-  - name: renews
-    url: "https://www.renews.biz/feed/"
-  - name: utility_dive
-    url: "https://www.utilitydive.com/feeds/news/"
+  - name: electric_ie
+    url: "https://electric.ie/feed/"
+  - name: businessgreen
+    url: "https://www.businessgreen.com/feeds/rss"
   - name: energy_live_news
     url: "https://www.energylivenews.com/feed/"
 
@@ -16,6 +21,14 @@ feeds:
 # scoring/keywords.yaml on purpose (Tier 3 must never import scoring.*).
 # Matched against each entry's title + summary at fetch time; the summary
 # itself is never stored (headline + link only, per CLAUDE.md).
+#
+# Deliberately UK/IE-anchored: purely generic engineering terms with no
+# geographic signal (plain "BESS", "battery storage", "wind farm") were
+# removed because they matched foreign stories just as readily as UK/IE
+# ones. Every term below either names a UK/IE entity/regulator/voltage
+# standard, or is specific enough (protection relay, gas-insulated
+# switchgear) to mostly co-occur with genuine grid-infrastructure coverage
+# now that the source feeds themselves are UK/IE-scoped.
 signal_keywords:
   - "substation"
   - "switchgear"
@@ -31,9 +44,6 @@ signal_keywords:
   - "\\bEHV\\b"
   - "\\bHVDC\\b"
   - "\\bHV\\b"
-  - "battery storage"
-  - "Battery Energy Storage Systems"
-  - "BESS"
   - "primary plant"
   - "secondary plant"
   - "\\bDNO\\b"
@@ -51,11 +61,11 @@ signal_keywords:
   - "\\bSPT\\b"
   - "Eirgrid"
   - "NESO"
+  - "ESB Networks"
+  - "\\bCRU\\b"
   - "interconnector"
   - "new grid capacity"
   - "grid reinforcement"
   - "network operator"
   - "transmission owner"
   - "distribution network operator"
-  - "offshore wind farm"
-  - "onshore wind farm"
