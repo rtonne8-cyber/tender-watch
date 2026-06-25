@@ -59,7 +59,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+    "scored_at": "2026-06-25T15:01:21.679547+00:00"
   },
   {
     "id": "find_a_tender-015393-2026",
@@ -85,7 +85,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+    "scored_at": "2026-06-25T15:01:21.679547+00:00"
   },
   {
     "id": "find_a_tender-007583-2026",
@@ -116,7 +116,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+    "scored_at": "2026-06-25T15:01:21.679547+00:00"
   },
   {
     "id": "find_a_tender-054864-2026",
@@ -260,7 +260,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+    "scored_at": "2026-06-25T15:01:21.679547+00:00"
   },
   {
     "id": "find_a_tender-052513-2026",
@@ -290,7 +290,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+    "scored_at": "2026-06-25T15:01:21.679547+00:00"
   },
   {
     "id": "find_a_tender-049902-2026",
@@ -313,7 +313,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+    "scored_at": "2026-06-25T15:01:21.679547+00:00"
   },
   {
     "id": "contracts_finder-7d76c0cc-559c-432b-bda3-e967b5ba87f9-900650",
@@ -334,7 +334,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+    "scored_at": "2026-06-25T15:01:21.679547+00:00"
   },
   {
     "id": "etenders_ie-7585381",
@@ -389,7 +389,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+    "scored_at": "2026-06-25T15:01:21.679547+00:00"
   },
   {
     "id": "etenders_ie-7770854",
@@ -413,7 +413,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Engineering & Consultancy",
-    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+    "scored_at": "2026-06-25T15:01:21.679547+00:00"
   },
   {
     "id": "etenders_ie-7712504",
@@ -447,6 +447,6 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Engineering & Consultancy",
-    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+    "scored_at": "2026-06-25T15:01:21.679547+00:00"
   }
 ]
