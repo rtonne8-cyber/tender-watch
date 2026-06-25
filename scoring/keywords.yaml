@@ -1,9 +1,26 @@
 # T&D (transmission & distribution) sector relevance allowlist.
-# Starter set built from domain knowledge — no source spec was available to
-# carry these over from; tune freely as real data comes through.
+# Original 10-code starter set built from domain knowledge. Expanded
+# 2026-06 against a full CPV-taxonomy review (cpv_engineering_codes_tender_
+# review.xlsx) — see TenderWatch chat history for the per-code rationale.
+# The reviewed-but-excluded codes (generic equipment/plant hire, lab
+# instruments, oil & gas, telecoms, water/gas utilities, generation/solar)
+# are deliberately left out: they're exactly the kind of broad/generic code
+# that caused a real false positive (an unrelated equipment-hire tender
+# auto-scored via one incidental "Transformers" tag) before the primary/
+# secondary CPV fix.
+#
+# 45310000 "Electrical installation work" was tried and removed: as a
+# primary classification it caught one genuine DNO-upgrade-support project
+# but also a flood of unrelated building electrical work (chiller
+# replacement, ATEX remedials, school rewiring, routine EICR inspections)
+# — too generic to auto-trust, same reasoning as the already-excluded
+# sibling 45315000 (building heating/electrical equipment). Genuinely
+# T&D-relevant cases still reach the Haiku gate via the existing \bDNO\b
+# keyword.
 
 cpv_allowlist:
-  - "45232220"  # Ancillary works for electricity transmission lines
+  # Already held (original 10)
+  - "45232220"  # Substation construction work
   - "45232210"  # Overhead line construction
   - "45231400"  # Construction work for electricity power lines
   - "45315300"  # Electricity supply installations
@@ -11,8 +28,78 @@ cpv_allowlist:
   - "65310000"  # Electricity distribution
   - "31200000"  # Electricity distribution and control apparatus
   - "31170000"  # Transformers
-  - "31214500"  # Switchgear
+  - "31214500"  # Electric switchboards
   - "71323100"  # Engineering design services for electrical installations
+
+  # Transformers (subtypes + related services)
+  - "31171000"  # Liquid dielectric transformers
+  - "31172000"  # Voltage transformers
+  - "31173000"  # Instrument transformer
+  - "31174000"  # Power supply transformers
+  - "31213200"  # Distribution transformers
+  - "45232221"  # Transformer substation
+  - "45317200"  # Electrical installation work of transformers
+  - "50532200"  # Repair and maintenance services of transformers
+  - "51111000"  # Installation services of electric motors, generators and transformers
+  - "51111300"  # Installation services of transformers
+  - "09211640"  # Electrical insulating oils
+
+  # Switchgear, distribution apparatus, protection
+  - "31214000"  # Switchgear
+  - "31214120"  # Earthing switch
+  - "31214400"  # Fuse switch disconnector
+  - "31214510"  # Distribution switchboards
+  - "31214520"  # Medium-voltage switchboards
+  - "31213000"  # Distribution equipment
+  - "31213400"  # Distribution system
+  - "31230000"  # Parts of electricity distribution or control apparatus
+  - "45317300"  # Electrical installation work of electrical distribution apparatus
+  - "50532400"  # Repair and maintenance services of electrical distribution equipment
+  - "51112000"  # Installation services of electricity distribution and control equipment
+  - "51112100"  # Installation services of electricity distribution equipment
+  - "31682300"  # Medium-voltage equipment
+  - "31682310"  # Medium-voltage panels
+  - "31682540"  # Substation equipment
+  - "31218000"  # Busbars
+  - "31711154"  # Capacitor banks
+  - "31211000"  # Boards and fuse boxes
+  - "31211200"  # Fuse boxes
+  - "31211300"  # Fuses
+  - "31211320"  # Fuse blocks
+  - "31211330"  # Fuse wires
+  - "31211340"  # Fuse clips
+  - "31221000"  # Electrical relays
+  - "31221100"  # Power relays
+  - "31221200"  # General purpose relays
+  - "31221300"  # Socket relays
+  - "31221400"  # Alternating voltage relays
+  - "31221500"  # Mercury relays
+  - "31221600"  # Time relays
+  - "31221700"  # Overload relays
+  - "31216000"  # Lightning arrestors
+  - "31216100"  # Lightning-protection equipment
+  - "31216200"  # Lightning conductors
+  - "45312310"  # Lightning-protection works
+  - "45312311"  # Lightning-conductor installation work
+
+  # Lines, cables, towers, T&D construction works
+  - "31320000"  # Power distribution cables
+  - "31321000"  # Electricity power lines
+  - "31321100"  # Overhead power lines
+  - "31321200"  # Low- and medium-voltage cable
+  - "31321210"  # Low-voltage cable
+  - "31321220"  # Medium-voltage cable
+  - "31321300"  # High-voltage cable
+  - "44212221"  # Pylons
+  - "44212222"  # Electricity transmission pylons
+  - "44212223"  # Pylon supports
+  - "44318000"  # Conductors
+  - "44111500"  # Insulators and insulating fittings
+  - "44111510"  # Insulators
+  - "44111511"  # Electrical insulators
+  - "45232200"  # Ancillary works for electricity power lines
+  - "45315400"  # High voltage installation work
+  - "45315500"  # Medium-voltage installation work
 
 # Sector label per CPV code, looked up against a scored record's cpv_codes.
 # Records with no CPV match (keyword/Haiku gated) fall back to "General T&D".
@@ -27,6 +114,73 @@ cpv_sectors:
   "31170000": "Substations & Switchgear"
   "31214500": "Substations & Switchgear"
   "71323100": "Engineering & Consultancy"
+
+  "31171000": "Substations & Switchgear"
+  "31172000": "Substations & Switchgear"
+  "31173000": "Substations & Switchgear"
+  "31174000": "Substations & Switchgear"
+  "31213200": "Substations & Switchgear"
+  "45232221": "Substations & Switchgear"
+  "45317200": "Substations & Switchgear"
+  "50532200": "Substations & Switchgear"
+  "51111000": "Substations & Switchgear"
+  "51111300": "Substations & Switchgear"
+  "09211640": "Substations & Switchgear"
+
+  "31214000": "Substations & Switchgear"
+  "31214120": "Substations & Switchgear"
+  "31214400": "Substations & Switchgear"
+  "31214510": "Substations & Switchgear"
+  "31214520": "Substations & Switchgear"
+  "31213000": "Substations & Switchgear"
+  "31213400": "Substations & Switchgear"
+  "31230000": "Substations & Switchgear"
+  "45317300": "Substations & Switchgear"
+  "50532400": "Substations & Switchgear"
+  "51112000": "Substations & Switchgear"
+  "51112100": "Substations & Switchgear"
+  "31682300": "Substations & Switchgear"
+  "31682310": "Substations & Switchgear"
+  "31682540": "Substations & Switchgear"
+  "31218000": "Substations & Switchgear"
+  "31711154": "Substations & Switchgear"
+  "31211000": "Substations & Switchgear"
+  "31211200": "Substations & Switchgear"
+  "31211300": "Substations & Switchgear"
+  "31211320": "Substations & Switchgear"
+  "31211330": "Substations & Switchgear"
+  "31211340": "Substations & Switchgear"
+  "31221000": "Substations & Switchgear"
+  "31221100": "Substations & Switchgear"
+  "31221200": "Substations & Switchgear"
+  "31221300": "Substations & Switchgear"
+  "31221400": "Substations & Switchgear"
+  "31221500": "Substations & Switchgear"
+  "31221600": "Substations & Switchgear"
+  "31221700": "Substations & Switchgear"
+  "31216000": "Substations & Switchgear"
+  "31216100": "Substations & Switchgear"
+  "31216200": "Substations & Switchgear"
+  "45312310": "Substations & Switchgear"
+  "45312311": "Substations & Switchgear"
+
+  "31320000": "Transmission & Distribution Networks"
+  "31321000": "Transmission & Distribution Networks"
+  "31321100": "Transmission & Distribution Networks"
+  "31321200": "Transmission & Distribution Networks"
+  "31321210": "Transmission & Distribution Networks"
+  "31321220": "Transmission & Distribution Networks"
+  "31321300": "Transmission & Distribution Networks"
+  "44212221": "Transmission & Distribution Networks"
+  "44212222": "Transmission & Distribution Networks"
+  "44212223": "Transmission & Distribution Networks"
+  "44318000": "Transmission & Distribution Networks"
+  "44111500": "Transmission & Distribution Networks"
+  "44111510": "Transmission & Distribution Networks"
+  "44111511": "Transmission & Distribution Networks"
+  "45232200": "Transmission & Distribution Networks"
+  "45315400": "Transmission & Distribution Networks"
+  "45315500": "Transmission & Distribution Networks"
 
 keywords:
   - "substation"

@@ -24,7 +24,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T15:52:51.873747+00:00"
+    "scored_at": "2026-06-25T17:43:43.858825+00:00"
   },
   {
     "id": "find_a_tender-052513-2026",
@@ -55,7 +55,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T15:52:51.873747+00:00"
+    "scored_at": "2026-06-25T17:43:43.858825+00:00"
   },
   {
     "id": "find_a_tender-049902-2026",
@@ -79,7 +79,29 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T15:52:51.873747+00:00"
+    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+  },
+  {
+    "id": "contracts_finder-66520e8b-b07f-4a1c-88c1-6d7076ede4ae-902537",
+    "source": "contracts_finder",
+    "tier": 1,
+    "title": "Cable Management System",
+    "buyer": "KBS Maritime Ltd",
+    "description": "Portsmouth Naval Base require a Portable Skid Mounted Cable Management System (CMS) to power some of their vessels. Each reel shall be capable of supplying a 60Hz electrical supply, up to 690V and 350A.",
+    "cpv_codes": [
+      "31320000"
+    ],
+    "primary_cpv": "31320000",
+    "value_low": 1000000,
+    "value_high": null,
+    "currency": "GBP",
+    "published_date": "2026-06-17T15:32:04+01:00",
+    "deadline_date": "2026-07-15T15:00:00+01:00",
+    "url": "https://www.contractsfinder.service.gov.uk/Notice/66520e8b-b07f-4a1c-88c1-6d7076ede4ae-902537",
+    "score": 90,
+    "score_method": "cpv_match",
+    "sector": "Transmission & Distribution Networks",
+    "scored_at": "2026-06-25T17:43:43.858825+00:00"
   },
   {
     "id": "contracts_finder-7d76c0cc-559c-432b-bda3-e967b5ba87f9-900650",
@@ -101,6 +123,72 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T15:52:51.873747+00:00"
+    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+  },
+  {
+    "id": "contracts_finder-53ba53b2-e512-4c7d-a8cb-314cef4bc28e-900571",
+    "source": "contracts_finder",
+    "tier": 1,
+    "title": "Supply Chain Notice: WP075 Photovoltaic Systems",
+    "buyer": "Ministry of Defence",
+    "description": "Kier Construction propose to subcontract to supply and install Photovoltaic Systems. This works package will be constructed at Keogh Barracks, Aldershot.\r\n\r\nThis is a future opportunity notice for suppliers to register their interest in being selected for inclusion on the tender list.  Please note this is a pipeline notice only and there is no further information at this time. \r\n\r\nAll values and dates in this notice are estimated only and we reserve the right to amend any of the information prior to issuing an invitation to tender.\r\n\r\nAdditional information: \r\nAll Supply Chain are required to hold Cyber Essentials accreditation and be looking to progress to Cyber Essentials Plus.\r\n\r\nAll Supply Chain employees and agents will be required to hold Baseline Personnel Security Standard (BPSS) accreditation and be prepared to undergo the Security Clearance (SC) process.",
+    "cpv_codes": [
+      "45312310"
+    ],
+    "primary_cpv": "45312310",
+    "value_low": 1500000,
+    "value_high": null,
+    "currency": "GBP",
+    "published_date": "2026-06-04T11:48:57+01:00",
+    "deadline_date": null,
+    "url": "https://www.contractsfinder.service.gov.uk/Notice/53ba53b2-e512-4c7d-a8cb-314cef4bc28e-900571",
+    "score": 90,
+    "score_method": "cpv_match",
+    "sector": "Substations & Switchgear",
+    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+  },
+  {
+    "id": "contracts_finder-e44f2b94-7055-48fe-aa95-8f4fa2a210b0-900558",
+    "source": "contracts_finder",
+    "tier": 1,
+    "title": "Supply Chain Notice: WP074 Lightning Protection",
+    "buyer": "Ministry of Defence",
+    "description": "Kier Construction propose to subcontract for the provision to supply and install Lightning Protection. This works package will be constructed at Keogh Barracks, Aldershot.\r\n\r\nThis is a future opportunity notice for suppliers to register their interest in being selected for inclusion on the tender list.  Please note this is a pipeline notice only and there is no further information at this time. \r\n\r\nAll values and dates in this notice are estimated only and we reserve the right to amend any of the information prior to issuing an invitation to tender.\r\n\r\nAdditional information: \r\nAll Supply Chain are required to hold Cyber Essentials accreditation and be looking to progress to Cyber Essentials Plus.\r\n\r\nAll Supply Chain employees and agents will be required to hold Baseline Personnel Security Standard (BPSS) accreditation and be prepared to undergo the Security Clearance (SC) process.",
+    "cpv_codes": [
+      "45312310"
+    ],
+    "primary_cpv": "45312310",
+    "value_low": 200000,
+    "value_high": null,
+    "currency": "GBP",
+    "published_date": "2026-06-04T11:19:03+01:00",
+    "deadline_date": null,
+    "url": "https://www.contractsfinder.service.gov.uk/Notice/e44f2b94-7055-48fe-aa95-8f4fa2a210b0-900558",
+    "score": 90,
+    "score_method": "cpv_match",
+    "sector": "Substations & Switchgear",
+    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+  },
+  {
+    "id": "contracts_finder-7f7c1766-6004-422d-bafe-d31890841d2d-897471",
+    "source": "contracts_finder",
+    "tier": 1,
+    "title": "CA17829 - PolyMAT Schools - LED Lighting Installation",
+    "buyer": "Woolwich Polytechnic School",
+    "description": "Bannockburn primary school requires removal and installation of LED lighting within a number of rooms, across their two sites. \r\n\r\nWork to be completed by 28th August 2026.\r\n\r\n\r\nTo access this competition: \r\n\r\nRegistered:\r\nLogin to https://suppliers.multiquote.com and view the opportunity CA17829.\r\n\r\nNot registered:\r\nVisit https://suppliers.multiquote.com then register and quote CA17829 as the reason for registration. \r\n\r\n Any queries please contact MultiQuote on 020 3920 8054.",
+    "cpv_codes": [
+      "45317300"
+    ],
+    "primary_cpv": "45317300",
+    "value_low": 80000,
+    "value_high": null,
+    "currency": "GBP",
+    "published_date": "2026-05-15T14:00:24+01:00",
+    "deadline_date": "2026-06-10T12:00:00+01:00",
+    "url": "https://www.contractsfinder.service.gov.uk/Notice/7f7c1766-6004-422d-bafe-d31890841d2d-897471",
+    "score": 90,
+    "score_method": "cpv_match",
+    "sector": "Substations & Switchgear",
+    "scored_at": "2026-06-25T17:43:43.858825+00:00"
   }
 ]

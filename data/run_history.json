@@ -1,5 +1,53 @@
 [
   {
+    "timestamp": "2026-06-25T17:43:44.165174+00:00",
+    "kind": "tenders",
+    "summary": {
+      "scored_count": 8,
+      "sources": {
+        "find_a_tender": {
+          "fetched": 988,
+          "status": "ok",
+          "scored": 3
+        },
+        "contracts_finder": {
+          "fetched": 500,
+          "status": "ok",
+          "scored": 5
+        },
+        "etenders_ie": {
+          "fetched": 500,
+          "status": "ok",
+          "scored": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-25T17:40:44.029863+00:00",
+    "kind": "tenders",
+    "summary": {
+      "scored_count": 20,
+      "sources": {
+        "find_a_tender": {
+          "fetched": 988,
+          "status": "ok",
+          "scored": 5
+        },
+        "contracts_finder": {
+          "fetched": 500,
+          "status": "ok",
+          "scored": 10
+        },
+        "etenders_ie": {
+          "fetched": 500,
+          "status": "ok",
+          "scored": 5
+        }
+      }
+    }
+  },
+  {
     "timestamp": "2026-06-25T15:52:52.336914+00:00",
     "kind": "tenders",
     "summary": {
