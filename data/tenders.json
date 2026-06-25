@@ -24,7 +24,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+    "scored_at": "2026-06-25T17:46:21.382366+00:00"
   },
   {
     "id": "find_a_tender-052513-2026",
@@ -55,7 +55,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+    "scored_at": "2026-06-25T17:46:21.382366+00:00"
   },
   {
     "id": "find_a_tender-049902-2026",
@@ -79,7 +79,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+    "scored_at": "2026-06-25T17:46:21.382366+00:00"
   },
   {
     "id": "contracts_finder-66520e8b-b07f-4a1c-88c1-6d7076ede4ae-902537",
@@ -101,7 +101,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+    "scored_at": "2026-06-25T17:46:21.382366+00:00"
   },
   {
     "id": "contracts_finder-7d76c0cc-559c-432b-bda3-e967b5ba87f9-900650",
@@ -123,7 +123,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+    "scored_at": "2026-06-25T17:46:21.382366+00:00"
   },
   {
     "id": "contracts_finder-53ba53b2-e512-4c7d-a8cb-314cef4bc28e-900571",
@@ -145,7 +145,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+    "scored_at": "2026-06-25T17:46:21.382366+00:00"
   },
   {
     "id": "contracts_finder-e44f2b94-7055-48fe-aa95-8f4fa2a210b0-900558",
@@ -167,7 +167,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+    "scored_at": "2026-06-25T17:46:21.382366+00:00"
   },
   {
     "id": "contracts_finder-7f7c1766-6004-422d-bafe-d31890841d2d-897471",
@@ -189,6 +189,6 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T17:43:43.858825+00:00"
+    "scored_at": "2026-06-25T17:46:21.382366+00:00"
   }
 ]
