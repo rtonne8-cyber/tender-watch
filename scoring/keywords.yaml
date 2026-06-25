@@ -4,6 +4,7 @@
 
 cpv_allowlist:
   - "45232220"  # Ancillary works for electricity transmission lines
+  - "45232210"  # Overhead line construction
   - "45231400"  # Construction work for electricity power lines
   - "45315300"  # Electricity supply installations
   - "65300000"  # Electricity distribution and related services
@@ -17,6 +18,7 @@ cpv_allowlist:
 # Records with no CPV match (keyword/Haiku gated) fall back to "General T&D".
 cpv_sectors:
   "45232220": "Transmission & Distribution Networks"
+  "45232210": "Transmission & Distribution Networks"
   "45231400": "Transmission & Distribution Networks"
   "65300000": "Transmission & Distribution Networks"
   "65310000": "Transmission & Distribution Networks"

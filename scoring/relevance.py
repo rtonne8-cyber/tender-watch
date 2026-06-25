@@ -118,7 +118,9 @@ def score_records(records, anthropic_api_key=None):
                 continue
             score = _haiku_gate(record, client)
             if score < KEYWORD_MATCH_SCORE_FLOOR:
+                print(f"  [haiku] {record['id']}: rejected, score={score} (floor={KEYWORD_MATCH_SCORE_FLOOR})", file=sys.stderr)
                 continue
+            print(f"  [haiku] {record['id']}: accepted, score={score}", file=sys.stderr)
             record["score"] = score
             record["score_method"] = "haiku_gate"
         else:

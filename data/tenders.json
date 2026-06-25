@@ -24,7 +24,38 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T15:26:04.705127+00:00"
+    "scored_at": "2026-06-25T15:52:51.873747+00:00"
+  },
+  {
+    "id": "find_a_tender-052513-2026",
+    "source": "find_a_tender",
+    "tier": 1,
+    "title": "Civils, Buildings, OHL and UGC Framework – Multi Site",
+    "buyer": "Scottish Hydro Electric Transmission (SHET)",
+    "description": "This procurement establishes a multi-lot framework for civils, buildings, overhead line and underground cable works across Scottish Hydro Electric Transmission’s large capital delivery portfolio in Scotland. \nThe framework covers six lots: \n-civils works up to £10m\n-civils works over £10m\n-buildings and infrastructure \n-overhead line pole construction \n-overhead line tower construction \n-underground cable construction\nIt is intended to appoint long-term strategic partners with the capability and capacity to deliver design, management, construction, testing and completion works, supporting network investment, renewal, customer connections and the transition to net zero. The framework has a potential total value of up to £7.4 billion, with lot specific framework appointed for a period up to eight years.",
+    "cpv_codes": [
+      "31321300",
+      "43310000",
+      "45200000",
+      "45210000",
+      "45213200",
+      "45231400",
+      "45232210",
+      "45314310",
+      "71311100",
+      "71322000"
+    ],
+    "primary_cpv": "45232210",
+    "value_low": 7400000000,
+    "value_high": null,
+    "currency": "GBP",
+    "published_date": "2026-06-03T16:57:31+01:00",
+    "deadline_date": "2026-07-16",
+    "url": "https://www.find-tender.service.gov.uk/Notice/052513-2026",
+    "score": 90,
+    "score_method": "cpv_match",
+    "sector": "Transmission & Distribution Networks",
+    "scored_at": "2026-06-25T15:52:51.873747+00:00"
   },
   {
     "id": "find_a_tender-049902-2026",
@@ -48,7 +79,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T15:26:04.705127+00:00"
+    "scored_at": "2026-06-25T15:52:51.873747+00:00"
   },
   {
     "id": "contracts_finder-7d76c0cc-559c-432b-bda3-e967b5ba87f9-900650",
@@ -70,6 +101,6 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T15:26:04.705127+00:00"
+    "scored_at": "2026-06-25T15:52:51.873747+00:00"
   }
 ]
