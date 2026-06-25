@@ -1,8 +1,57 @@
 [
   {
+    "id": "renews-3e598cef8ced",
+    "source": "renews",
+    "headline": "RenewableNI appoints Dunlop as chair",
+    "link": "https://www.renews.biz/other-news/people/renewableni-appoints-dunlop-as-chair/",
+    "published_date": "Thu, 25 Jun 2026 10:08:48 +0000"
+  },
+  {
+    "id": "renews-ecfeec624725",
+    "source": "renews",
+    "headline": "BenderKrøger launches energy law firm",
+    "link": "https://www.renews.biz/other-news/benderkroger-launches-energy-law-firm/",
+    "published_date": "Thu, 25 Jun 2026 09:45:29 +0000"
+  },
+  {
+    "id": "renews-9212c22fa960",
+    "source": "renews",
+    "headline": "Court rules in favour of Orsted in Elsam case",
+    "link": "https://www.renews.biz/other-news/court-rules-in-favour-of-orsted-in-elsam-case/",
+    "published_date": "Thu, 25 Jun 2026 09:37:00 +0000"
+  },
+  {
+    "id": "renews-1253d9fee312",
+    "source": "renews",
+    "headline": "Suzlon bags 400MW Tata onshore deal",
+    "link": "https://www.renews.biz/onshore-wind/suzlon-wins-repeat-tata-power-epc-order/",
+    "published_date": "Thu, 25 Jun 2026 09:14:48 +0000"
+  },
+  {
+    "id": "renews-75b12f31a548",
+    "source": "renews",
+    "headline": "EnBW begins Philippsburg BESS construction",
+    "link": "https://www.renews.biz/other-news/energy-storage/enbw-begins-philippsburg-bess-construction/",
+    "published_date": "Thu, 25 Jun 2026 09:05:12 +0000"
+  },
+  {
+    "id": "renews-51282d5ee56a",
+    "source": "renews",
+    "headline": "CIP hits financial close on 392MW onshore giant",
+    "link": "https://www.renews.biz/onshore-wind/cip-hits-financial-close-on-392mw-onshore-giant/",
+    "published_date": "Thu, 25 Jun 2026 06:53:11 +0000"
+  },
+  {
+    "id": "renews-5a9868999510",
+    "source": "renews",
+    "headline": "Rare artefacts found at Hornsea 3 site",
+    "link": "https://www.renews.biz/offshore-wind/ingots-found-at-hornsea-3-site/",
+    "published_date": "Thu, 25 Jun 2026 06:49:13 +0000"
+  },
+  {
     "id": "renews-f2d3d09a516e",
     "source": "renews",
-    "headline": "PNE Commissions 18MW ‘Gnutz Ost’ Wind Farm",
+    "headline": "PNE commissions 18MW Gnutz Ost wind farm",
     "link": "https://www.renews.biz/onshore-wind/pne-commissions-18mw-gnutz-ost-wind-farm/",
     "published_date": "Wed, 24 Jun 2026 15:57:57 +0000"
   },
@@ -19,55 +68,6 @@
     "headline": "Swedish authority U-turn to back offshore wind",
     "link": "https://www.renews.biz/offshore-wind/swedish-authority-u-turn-to-back-offshore-wind/",
     "published_date": "Wed, 24 Jun 2026 14:20:39 +0000"
-  },
-  {
-    "id": "renews-fb513f458279",
-    "source": "renews",
-    "headline": "BSR submits Elmley Road solar plan",
-    "link": "https://www.renews.biz/solar/bsr-submits-elmley-road-solar-plan/",
-    "published_date": "Wed, 24 Jun 2026 13:28:58 +0000"
-  },
-  {
-    "id": "renews-aae3455e1754",
-    "source": "renews",
-    "headline": "SSE, Equinor launch Dogger D onshore consultation",
-    "link": "https://www.renews.biz/offshore-wind/sse-equinor-launch-dogger-d-onshore-consultation/",
-    "published_date": "Wed, 24 Jun 2026 11:54:50 +0000"
-  },
-  {
-    "id": "renews-696251bbb637",
-    "source": "renews",
-    "headline": "WindEurope calls for binding 2040 renewables goal",
-    "link": "https://www.renews.biz/other-news/windeurope-calls-for-binding-2040-renewables-goal/",
-    "published_date": "Wed, 24 Jun 2026 10:51:52 +0000"
-  },
-  {
-    "id": "renews-714c02f5e611",
-    "source": "renews",
-    "headline": "Climate watchdog urges faster UK electrification",
-    "link": "https://www.renews.biz/other-news/climate-watchdog-urges-faster-uk-electrification/",
-    "published_date": "Wed, 24 Jun 2026 09:53:47 +0000"
-  },
-  {
-    "id": "renews-41b8a4f138a4",
-    "source": "renews",
-    "headline": "SANY installs first turbine in Europe",
-    "link": "https://www.renews.biz/onshore-wind/sany-installs-first-turbine-in-europe/",
-    "published_date": "Wed, 24 Jun 2026 09:16:25 +0000"
-  },
-  {
-    "id": "renews-9b53d560303d",
-    "source": "renews",
-    "headline": "CWP challenges MoD’s Eskdalemuir approach",
-    "link": "https://www.renews.biz/onshore-wind/cwp-challenges-mods-eskdalemuir-approach/",
-    "published_date": "Wed, 24 Jun 2026 09:09:55 +0000"
-  },
-  {
-    "id": "renews-0e94acf06182",
-    "source": "renews",
-    "headline": "Turkey unveils draft rules for 1GW auction",
-    "link": "https://www.renews.biz/offshore-wind/turkey-unveils-draft-rules-for-1gw-auction/",
-    "published_date": "Wed, 24 Jun 2026 09:00:09 +0000"
   },
   {
     "id": "utility_dive-3e5ff7e0a3ad",
@@ -135,7 +135,7 @@
   {
     "id": "utility_dive-adbeea0e140c",
     "source": "utility_dive",
-    "headline": "How much electricity are 202(c) power plants producing? Way less than before.",
+    "headline": "Power plants under DOE emergency orders are producing way less energy than before",
     "link": "https://www.utilitydive.com/news/doe-202c-power-plants-centralia-campbell-schahfer/822062/",
     "published_date": "Tue, 23 Jun 2026 09:34:53 -0400"
   },

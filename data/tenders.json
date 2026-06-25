@@ -141,7 +141,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-24T17:46:52.273091+00:00"
+    "scored_at": "2026-06-25T10:12:13.763247+00:00"
   },
   {
     "id": "find_a_tender-052513-2026",
@@ -171,7 +171,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-24T17:46:52.273091+00:00"
+    "scored_at": "2026-06-25T10:12:13.763247+00:00"
   },
   {
     "id": "find_a_tender-049902-2026",
@@ -194,7 +194,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-24T17:46:52.273091+00:00"
+    "scored_at": "2026-06-25T10:12:13.763247+00:00"
   },
   {
     "id": "etenders_ie-7585381",
@@ -249,7 +249,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-24T17:46:52.273091+00:00"
+    "scored_at": "2026-06-25T10:12:13.763247+00:00"
   },
   {
     "id": "etenders_ie-7770854",
@@ -273,7 +273,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Engineering & Consultancy",
-    "scored_at": "2026-06-24T17:46:52.273091+00:00"
+    "scored_at": "2026-06-25T10:12:13.763247+00:00"
   },
   {
     "id": "etenders_ie-7712504",
@@ -307,6 +307,6 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Engineering & Consultancy",
-    "scored_at": "2026-06-24T17:46:52.273091+00:00"
+    "scored_at": "2026-06-25T10:12:13.763247+00:00"
   }
 ]
