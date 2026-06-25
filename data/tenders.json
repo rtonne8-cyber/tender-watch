@@ -24,7 +24,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T15:14:29.995717+00:00"
+    "scored_at": "2026-06-25T15:26:04.705127+00:00"
   },
   {
     "id": "find_a_tender-049902-2026",
@@ -48,7 +48,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T15:14:29.995717+00:00"
+    "scored_at": "2026-06-25T15:26:04.705127+00:00"
   },
   {
     "id": "contracts_finder-7d76c0cc-559c-432b-bda3-e967b5ba87f9-900650",
@@ -70,6 +70,6 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T15:14:29.995717+00:00"
+    "scored_at": "2026-06-25T15:26:04.705127+00:00"
   }
 ]
