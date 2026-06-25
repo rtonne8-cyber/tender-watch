@@ -8,6 +8,7 @@ record.
 
 import hashlib
 import os
+import re
 import sys
 
 import feedparser
@@ -21,9 +22,16 @@ FEEDS_PATH = os.path.join(os.path.dirname(__file__), "feeds.yaml")
 MAX_PER_FEED = 50
 
 
-def _load_feeds():
+def _load_config():
     with open(FEEDS_PATH, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)["feeds"]
+        config = yaml.safe_load(f)
+    patterns = [re.compile(p, re.IGNORECASE) for p in config.get("signal_keywords", [])]
+    return config["feeds"], patterns
+
+
+def _is_relevant(entry, patterns):
+    text = f"{entry.get('title', '')} {entry.get('summary', '')}"
+    return any(p.search(text) for p in patterns)
 
 
 def _record_id(source, entry):
@@ -32,13 +40,15 @@ def _record_id(source, entry):
     return f"{source}-{digest}"
 
 
-def _fetch_one(name, url):
+def _fetch_one(name, url, patterns):
     raw = fetch_bytes(url)
     parsed = feedparser.parse(raw)
     if not parsed.entries and parsed.bozo:
         raise RuntimeError(f"not a parseable feed (bozo): {parsed.get('bozo_exception')}")
     records = []
     for entry in parsed.entries[:MAX_PER_FEED]:
+        if not _is_relevant(entry, patterns):
+            continue
         records.append(
             {
                 "id": _record_id(name, entry),
@@ -53,12 +63,13 @@ def _fetch_one(name, url):
 
 def fetch_all():
     """Fetch every configured feed. A broken feed is logged and skipped."""
+    feeds, patterns = _load_config()
     all_records = []
     summary = {}
-    for feed in _load_feeds():
+    for feed in feeds:
         name, url = feed["name"], feed["url"]
         try:
-            records = _fetch_one(name, url)
+            records = _fetch_one(name, url, patterns)
             summary[name] = {"fetched": len(records), "status": "ok"}
             all_records.extend(records)
         except Exception as exc:  # noqa: BLE001 - one broken feed must not kill the run

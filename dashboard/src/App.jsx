@@ -55,6 +55,7 @@ export default function App() {
   const [deadlineWithinDays, setDeadlineWithinDays] = useState(null);
   const [newSinceLastVisit, setNewSinceLastVisit] = useState(false);
   const [lastVisitTimestamp] = useState(() => readLastVisit());
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetch("./data/tenders.json")
@@ -82,8 +83,9 @@ export default function App() {
       deadlineWithinDays,
       newSinceLastVisit,
       lastVisitTimestamp,
+      searchText,
     });
-  }, [records, sources, tiers, sectors, minScore, deadlineWithinDays, newSinceLastVisit, lastVisitTimestamp]);
+  }, [records, sources, tiers, sectors, minScore, deadlineWithinDays, newSinceLastVisit, lastVisitTimestamp, searchText]);
 
   return (
     <div style={{ maxWidth: 1100, margin: "0 auto", padding: "24px 16px" }}>
@@ -100,6 +102,17 @@ export default function App() {
       {records && (
         <>
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-start", marginBottom: 16, padding: 12, background: "#fff", border: "1px solid #e2e2dd" }}>
+            <div style={{ marginRight: 20, minWidth: 200 }}>
+              <div style={{ fontWeight: "bold", fontSize: 12, marginBottom: 4 }}>Search</div>
+              <input
+                type="text"
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)}
+                placeholder="Title, buyer, description…"
+                style={{ width: "100%", padding: "4px 6px", fontSize: 13, border: "1px solid var(--tw-stone)" }}
+              />
+            </div>
+
             <CheckboxGroup
               label="Source"
               options={sourceOptions}

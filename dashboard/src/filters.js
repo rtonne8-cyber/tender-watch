@@ -1,6 +1,6 @@
 const DAY_MS = 24 * 60 * 60 * 1000;
 
-// Six independent predicates, ANDed together. Each checks only its own
+// Seven independent predicates, ANDed together. Each checks only its own
 // field on the record — no filter's logic depends on another's state.
 export function filterRecords(records, filters, now = Date.now()) {
   const {
@@ -11,7 +11,10 @@ export function filterRecords(records, filters, now = Date.now()) {
     deadlineWithinDays = null, // number | null
     newSinceLastVisit = false,
     lastVisitTimestamp = null, // ms epoch | null
+    searchText = "", // string
   } = filters;
+
+  const search = searchText.trim().toLowerCase();
 
   return records.filter((r) => {
     if (sources && sources.size > 0 && !sources.has(r.source)) return false;
@@ -31,8 +34,22 @@ export function filterRecords(records, filters, now = Date.now()) {
       if (Number.isNaN(scoredAt) || scoredAt <= lastVisitTimestamp) return false;
     }
 
+    if (search) {
+      const haystack = `${r.title || ""} ${r.buyer || ""} ${r.description || ""}`.toLowerCase();
+      if (!haystack.includes(search)) return false;
+    }
+
     return true;
   });
+}
+
+// Tier 3 signals have a different schema (headline only, no title/buyer) —
+// kept as a separate function rather than generalising filterRecords, so
+// the Tier 1/Tier 3 structural separation never grows a shared code path.
+export function filterSignals(signals, searchText = "") {
+  const search = searchText.trim().toLowerCase();
+  if (!search) return signals;
+  return signals.filter((s) => (s.headline || "").toLowerCase().includes(search));
 }
 
 export function uniqueValues(records, field) {
