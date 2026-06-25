@@ -1,10 +1,16 @@
-name: Refresh tender data
+name: Refresh tender data and deploy dashboard
 
 on:
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   refresh:
@@ -34,3 +40,35 @@ jobs:
           git add data/tenders.json data/signals.json
           git diff --cached --quiet || git commit -m "chore: refresh tender data"
           git push
+
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dashboard dependencies
+        working-directory: dashboard
+        run: npm install
+
+      - name: Build dashboard
+        working-directory: dashboard
+        run: npm run build
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard/dist
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
