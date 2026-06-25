@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import SignalsFeed from "./SignalsFeed.jsx";
+import RunHistory, { formatLastUpdated } from "./RunHistory.jsx";
 import { filterRecords, uniqueValues, readLastVisit, writeLastVisitNow } from "./filters.js";
 
 const SOURCE_LABELS = {
@@ -56,6 +57,7 @@ export default function App() {
   const [newSinceLastVisit, setNewSinceLastVisit] = useState(false);
   const [lastVisitTimestamp] = useState(() => readLastVisit());
   const [searchText, setSearchText] = useState("");
+  const [history, setHistory] = useState(null);
 
   useEffect(() => {
     fetch("./data/tenders.json")
@@ -65,6 +67,11 @@ export default function App() {
       })
       .then((data) => setRecords(data))
       .catch((err) => setError(err.message));
+
+    fetch("./data/run_history.json")
+      .then((res) => (res.ok ? res.json() : []))
+      .catch(() => [])
+      .then((data) => setHistory(data));
 
     writeLastVisitNow();
   }, []);
@@ -94,6 +101,11 @@ export default function App() {
         <p style={{ margin: "4px 0 0", color: "var(--tw-stone)" }}>
           T&amp;D-relevant tender notices — UK &amp; Ireland public procurement
         </p>
+        {formatLastUpdated(history) && (
+          <p style={{ margin: "4px 0 0", color: "var(--tw-stone)", fontSize: 12 }}>
+            Last updated: {formatLastUpdated(history)}
+          </p>
+        )}
       </header>
 
       {error && <p style={{ color: "crimson" }}>Failed to load data: {error}</p>}
@@ -190,6 +202,8 @@ export default function App() {
       )}
 
       <SignalsFeed />
+
+      <RunHistory history={history} />
     </div>
   );
 }

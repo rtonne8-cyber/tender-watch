@@ -18,3 +18,10 @@ for (const name of ["tenders.json", "signals.json"]) {
   copyFileSync(src, dest);
   console.log(`copy-data: copied ${src} -> ${dest}`);
 }
+
+// run_history.json is optional — it won't exist before the first run.
+const historySrc = join(repoRoot, "data", "run_history.json");
+if (existsSync(historySrc)) {
+  copyFileSync(historySrc, join(destDir, "run_history.json"));
+  console.log(`copy-data: copied ${historySrc} -> ${join(destDir, "run_history.json")}`);
+}

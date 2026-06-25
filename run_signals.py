@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 
 from fetchers.news_signals import fetch_all
+from history import record_run
 
 DATA_PATH = Path(__file__).parent / "data" / "signals.json"
 
@@ -22,6 +23,8 @@ def run():
     print(f"Wrote {len(records)} signal records to {DATA_PATH}")
     for name, stats in summary.items():
         print(f"  {name}: fetched={stats['fetched']} status={stats['status']}")
+
+    record_run("signals", {"count": len(records), "sources": summary})
 
     return records, summary
 

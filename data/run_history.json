@@ -1,0 +1,51 @@
+[
+  {
+    "timestamp": "2026-06-25T12:22:05.632674+00:00",
+    "kind": "signals",
+    "summary": {
+      "count": 2,
+      "sources": {
+        "utility_week": {
+          "fetched": 0,
+          "status": "error: not a parseable feed (bozo): <unknown>:5:198: not well-formed (invalid token)"
+        },
+        "electric_ie": {
+          "fetched": 0,
+          "status": "ok"
+        },
+        "businessgreen": {
+          "fetched": 2,
+          "status": "ok"
+        },
+        "energy_live_news": {
+          "fetched": 0,
+          "status": "ok"
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-06-25T12:22:00.199925+00:00",
+    "kind": "tenders",
+    "summary": {
+      "scored_count": 6,
+      "sources": {
+        "find_a_tender": {
+          "fetched": 500,
+          "status": "ok",
+          "scored": 3
+        },
+        "contracts_finder": {
+          "fetched": 500,
+          "status": "ok",
+          "scored": 0
+        },
+        "etenders_ie": {
+          "fetched": 500,
+          "status": "ok",
+          "scored": 3
+        }
+      }
+    }
+  }
+]

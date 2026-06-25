@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 from fetchers import contracts_finder, etenders_ie, fts
+from history import record_run
 from scoring.relevance import score_records
 
 DATA_PATH = Path(__file__).parent / "data" / "tenders.json"
@@ -43,6 +44,8 @@ def run():
     print(f"Wrote {len(scored)} scored records to {DATA_PATH}")
     for name, stats in summary.items():
         print(f"  {name}: fetched={stats['fetched']} scored={stats.get('scored', 0)} status={stats['status']}")
+
+    record_run("tenders", {"scored_count": len(scored), "sources": summary})
 
     return scored, summary
 
