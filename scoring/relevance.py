@@ -41,7 +41,21 @@ def _load_keywords():
 _CPV_ALLOWLIST, _KEYWORD_PATTERNS, _CPV_SECTORS = _load_keywords()
 
 
-def _cpv_match(record):
+def _primary_cpv_match(record):
+    """The notice's actual subject (not an incidental item tag) is allowlisted."""
+    return record.get("primary_cpv") in _CPV_ALLOWLIST
+
+
+def _secondary_cpv_match(record):
+    """An allowlisted code appears only among secondary/item classifications.
+
+    Division-31 codes (electrical equipment/apparatus, e.g. transformers,
+    switchgear) are especially prone to this: they get tagged onto broad
+    equipment-hire/supply frameworks whose actual subject is unrelated (seen
+    live: a generic plant-hire tender carrying CPV 31170000 "Transformers" as
+    one of 11 incidental item tags, primary classification "Construction
+    machinery and equipment"). Treated as ambiguous rather than auto-trusted.
+    """
     return bool(_CPV_ALLOWLIST.intersection(record.get("cpv_codes") or []))
 
 
@@ -92,10 +106,10 @@ def score_records(records, anthropic_api_key=None):
     now = datetime.now(timezone.utc).isoformat()
 
     for record in records:
-        if _cpv_match(record):
+        if _primary_cpv_match(record):
             record["score"] = CPV_SCORE
             record["score_method"] = "cpv_match"
-        elif _keyword_match(record):
+        elif _keyword_match(record) or _secondary_cpv_match(record):
             if client is None:
                 print(
                     f"  [skip] {record['id']}: ambiguous but no ANTHROPIC_API_KEY set",

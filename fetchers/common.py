@@ -104,9 +104,13 @@ def normalise_ocds_release(release, source, tier=1, url_builder=None):
     tender_period = tender.get("tenderPeriod", {}) or {}
     buyer = release.get("buyer", {}) or {}
 
-    cpv_codes = []
+    primary_cpv = None
     if classification.get("scheme") == "CPV" and classification.get("id"):
-        cpv_codes.append(classification["id"])
+        primary_cpv = classification["id"]
+
+    cpv_codes = []
+    if primary_cpv:
+        cpv_codes.append(primary_cpv)
     for item in tender.get("items", []) or []:
         for extra in item.get("additionalClassifications", []) or []:
             if extra.get("scheme") == "CPV" and extra.get("id"):
@@ -124,6 +128,7 @@ def normalise_ocds_release(release, source, tier=1, url_builder=None):
         "buyer": buyer.get("name") or "(unknown buyer)",
         "description": tender.get("description") or release.get("description") or "",
         "cpv_codes": cpv_codes,
+        "primary_cpv": primary_cpv,
         "value_low": value.get("amount"),
         "value_high": None,
         "currency": value.get("currency"),

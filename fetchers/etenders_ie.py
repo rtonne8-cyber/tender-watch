@@ -80,6 +80,7 @@ def fetch():
                 "buyer": row.get("Contracting Authority") or "(unknown buyer)",
                 "description": row.get("Main Cpv Code Description") or "",
                 "cpv_codes": cpv_codes,
+                "primary_cpv": row.get("Main Cpv Code") or None,
                 "value_low": _parse_amount(row.get("Sum of Notice Estimated Value (\x80)")),
                 "value_high": None,
                 "currency": "EUR",
