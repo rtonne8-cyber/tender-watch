@@ -1,5 +1,124 @@
 [
   {
+    "id": "find_a_tender-030233-2026",
+    "source": "find_a_tender",
+    "tier": 1,
+    "title": "Scottishpower - Services",
+    "buyer": "SCOTTISH POWER UK PLC",
+    "description": "Scottish Power is part of the Iberdrola Group, which uses Go Supply as its global supplier registration partner. For the purpose of this notice, a reference to Scottish Power includes Scottish Power UK PLC and all companies within the Scottish Power group including, but not limited to:\n-\tScottish Power Energy Networks Holdings Limited;\n-\tSP Transmission PLC;\n-\tSP Distribution PLC;\n-\tSP Manweb PLC;\n-\tSP Power Systems Limited; and\n-       Electricity North West Limited\nGo Supply is a qualification system operated by Achilles.",
+    "cpv_codes": [
+      "09211640",
+      "18142000",
+      "18444100",
+      "31100000",
+      "31200000",
+      "31300000",
+      "31600000",
+      "32500000",
+      "34928300",
+      "34928310",
+      "34990000",
+      "38341300",
+      "39299200",
+      "39710000",
+      "42418500",
+      "42418910",
+      "42418920",
+      "42418940",
+      "43300000",
+      "44000000",
+      "45000000",
+      "48000000",
+      "50000000",
+      "50800000",
+      "51000000",
+      "60000000",
+      "64000000",
+      "65000000",
+      "66000000",
+      "71000000",
+      "72000000",
+      "73000000",
+      "77000000",
+      "79342300",
+      "79342310",
+      "79342311",
+      "79342320",
+      "79417000",
+      "79421000",
+      "80000000",
+      "90000000",
+      "98000000"
+    ],
+    "value_low": null,
+    "value_high": null,
+    "currency": null,
+    "published_date": "2026-04-01T11:17:02+01:00",
+    "deadline_date": null,
+    "url": "https://www.find-tender.service.gov.uk/Notice/030233-2026",
+    "score": 90,
+    "score_method": "cpv_match",
+    "sector": "Substations & Switchgear",
+    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+  },
+  {
+    "id": "find_a_tender-015393-2026",
+    "source": "find_a_tender",
+    "tier": 1,
+    "title": "ON STREET EV CHARGING INFRASTRUCTURE",
+    "buyer": "Dundee City Council",
+    "description": "Dundee City Council is proposing to let a concession contract for the installation and operation of the charge points to be installed as part of the Transport Scotland (TS) Electric Vehicle Infrastructure Fund (EVIF).",
+    "cpv_codes": [
+      "31000000",
+      "31158000",
+      "34144900",
+      "45315300",
+      "50100000",
+      "65300000"
+    ],
+    "value_low": null,
+    "value_high": null,
+    "currency": null,
+    "published_date": "2026-02-19T16:01:46Z",
+    "deadline_date": null,
+    "url": "https://www.find-tender.service.gov.uk/Notice/015393-2026",
+    "score": 90,
+    "score_method": "cpv_match",
+    "sector": "Substations & Switchgear",
+    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+  },
+  {
+    "id": "find_a_tender-007583-2026",
+    "source": "find_a_tender",
+    "tier": 1,
+    "title": "Hire of Plant Equipment, Refuse Slips & Support Services (with on-site managed service)",
+    "buyer": "City Building (Glasgow) LLP",
+    "description": "City Building (Glasgow) LLP requires to procure the provision of the hire of plant, refuse skips and support services, complete with an on site managed service. The successful bidder will provide the on site managed service at 35 Darnick Street in Glasgow, Monday to Friday 8am to 5pm. Core products within the tender are anticipated to be (subject to change prior to tender publication) :\n-Towers, steps, ladders, fencing barriers\n-Small plant includig hand tools\n-Generators, Transformers\n-Refuse and waste skips\n-Accommodation including containers, eco units, welfare units and temp offices/canteens\n-Waste water\n-Fuel, Diesel\n-Mechanical Access\n-Hoist and Access\n-Misc sale items",
+    "cpv_codes": [
+      "31120000",
+      "31170000",
+      "34952000",
+      "42600000",
+      "43132300",
+      "43300000",
+      "44211100",
+      "44212230",
+      "44423200",
+      "44481000",
+      "44613700"
+    ],
+    "value_low": null,
+    "value_high": null,
+    "currency": null,
+    "published_date": "2026-01-28T12:55:29Z",
+    "deadline_date": null,
+    "url": "https://www.find-tender.service.gov.uk/Notice/007583-2026",
+    "score": 90,
+    "score_method": "cpv_match",
+    "sector": "Substations & Switchgear",
+    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+  },
+  {
     "id": "find_a_tender-054864-2026",
     "source": "find_a_tender",
     "tier": 1,
@@ -141,7 +260,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Substations & Switchgear",
-    "scored_at": "2026-06-25T12:29:48.020729+00:00"
+    "scored_at": "2026-06-25T12:49:33.210120+00:00"
   },
   {
     "id": "find_a_tender-052513-2026",
@@ -171,7 +290,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T12:29:48.020729+00:00"
+    "scored_at": "2026-06-25T12:49:33.210120+00:00"
   },
   {
     "id": "find_a_tender-049902-2026",
@@ -194,7 +313,28 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T12:29:48.020729+00:00"
+    "scored_at": "2026-06-25T12:49:33.210120+00:00"
+  },
+  {
+    "id": "contracts_finder-7d76c0cc-559c-432b-bda3-e967b5ba87f9-900650",
+    "source": "contracts_finder",
+    "tier": 1,
+    "title": "60Hz Transformer Purchase",
+    "buyer": "KBS Maritime Ltd",
+    "description": "This is for the purchase of 60 Hz Transformers for Portsmouth Naval Base.",
+    "cpv_codes": [
+      "31170000"
+    ],
+    "value_low": 250000,
+    "value_high": null,
+    "currency": "GBP",
+    "published_date": "2026-06-04T15:01:48+01:00",
+    "deadline_date": "2026-06-30T15:00:00+01:00",
+    "url": "https://www.contractsfinder.service.gov.uk/Notice/7d76c0cc-559c-432b-bda3-e967b5ba87f9-900650",
+    "score": 90,
+    "score_method": "cpv_match",
+    "sector": "Substations & Switchgear",
+    "scored_at": "2026-06-25T12:49:33.210120+00:00"
   },
   {
     "id": "etenders_ie-7585381",
@@ -249,7 +389,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Transmission & Distribution Networks",
-    "scored_at": "2026-06-25T12:29:48.020729+00:00"
+    "scored_at": "2026-06-25T12:49:33.210120+00:00"
   },
   {
     "id": "etenders_ie-7770854",
@@ -273,7 +413,7 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Engineering & Consultancy",
-    "scored_at": "2026-06-25T12:29:48.020729+00:00"
+    "scored_at": "2026-06-25T12:49:33.210120+00:00"
   },
   {
     "id": "etenders_ie-7712504",
@@ -307,6 +447,6 @@
     "score": 90,
     "score_method": "cpv_match",
     "sector": "Engineering & Consultancy",
-    "scored_at": "2026-06-25T12:29:48.020729+00:00"
+    "scored_at": "2026-06-25T12:49:33.210120+00:00"
   }
 ]

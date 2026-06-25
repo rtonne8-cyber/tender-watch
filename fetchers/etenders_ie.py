@@ -50,6 +50,12 @@ def fetch():
     cutoff = datetime.now(timezone.utc) - timedelta(days=RECENT_DAYS)
     rows = []
     for row in reader:
+        # Pipeline/tender stage only — this CSV mixes notice and award/
+        # cancellation info in the same row (no separate OCDS-style stage
+        # field), so a populated "Award Published" or "Cancelled Date"
+        # means it's already past the stage this project tracks.
+        if row.get("Award Published") or row.get("Cancelled Date"):
+            continue
         published = _parse_date(row.get("Notice Published Date / Contract Created Date"))
         if published is None or published < cutoff:
             continue

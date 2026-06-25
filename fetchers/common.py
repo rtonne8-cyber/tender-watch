@@ -53,6 +53,29 @@ def fetch_ocds_releases(url, params, max_records=500, max_pages=10):
     return releases[:max_records]
 
 
+def fetch_ocds_releases_multi_stage(url, base_params, stages, max_records_per_stage=500):
+    """Fetch multiple OCDS stages and merge, deduping by release id/ocid.
+
+    Some OCDS APIs (Find a Tender, as of June 2026) silently return zero
+    results for a comma-separated multi-stage value despite documenting it
+    as supported — fetching each stage separately and merging here avoids
+    relying on that. A release can legitimately carry more than one stage
+    tag (e.g. both "planning" and "tender"), so the same release may turn up
+    in more than one of these calls; dedup keeps the first occurrence.
+    """
+    seen = set()
+    merged = []
+    for stage in stages:
+        params = dict(base_params, stages=stage)
+        for release in fetch_ocds_releases(url, params, max_records=max_records_per_stage):
+            key = release.get("id") or release.get("ocid")
+            if key in seen:
+                continue
+            seen.add(key)
+            merged.append(release)
+    return merged
+
+
 def fetch_bytes(url, timeout=60, retries=MAX_RETRIES):
     """GET raw bytes (e.g. a CSV) with a browser-like UA and retries."""
     last_exc = None

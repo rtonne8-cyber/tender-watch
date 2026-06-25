@@ -5,10 +5,15 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from fetchers.common import fetch_ocds_releases, normalise_ocds_release
+from fetchers.common import fetch_ocds_releases_multi_stage, normalise_ocds_release
 
 API_URL = "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages"
 SOURCE = "find_a_tender"
+
+# Pipeline/planning + active tender stages only — explicitly excludes
+# award/contract/implementation per the project's scope (we track upcoming
+# and live opportunities, not what's already been won or signed).
+STAGES = ["planning", "tender"]
 
 
 def _notice_url(release):
@@ -16,7 +21,9 @@ def _notice_url(release):
 
 
 def fetch(max_records=500):
-    releases = fetch_ocds_releases(API_URL, {"stages": "tender", "limit": 100}, max_records=max_records)
+    releases = fetch_ocds_releases_multi_stage(
+        API_URL, {"limit": 100}, STAGES, max_records_per_stage=max_records
+    )
     return [normalise_ocds_release(r, SOURCE, tier=1, url_builder=_notice_url) for r in releases]
 
 

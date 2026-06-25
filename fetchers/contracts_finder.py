@@ -16,7 +16,12 @@ def _notice_url(release):
 
 
 def fetch(max_records=500):
-    releases = fetch_ocds_releases(API_URL, {"order": "desc", "limit": 100}, max_records=max_records)
+    # Pipeline/planning + active tender stages only — excludes award/
+    # implementation. Without this, Contracts Finder returns ~84% award
+    # notices (confirmed live June 2026) since it has no default stage filter.
+    releases = fetch_ocds_releases(
+        API_URL, {"order": "desc", "stages": "planning,tender", "limit": 100}, max_records=max_records
+    )
     return [normalise_ocds_release(r, SOURCE, tier=1, url_builder=_notice_url) for r in releases]
 
 

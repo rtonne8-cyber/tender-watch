@@ -1,5 +1,29 @@
 [
   {
+    "timestamp": "2026-06-25T12:49:33.469108+00:00",
+    "kind": "tenders",
+    "summary": {
+      "scored_count": 10,
+      "sources": {
+        "find_a_tender": {
+          "fetched": 988,
+          "status": "ok",
+          "scored": 6
+        },
+        "contracts_finder": {
+          "fetched": 500,
+          "status": "ok",
+          "scored": 1
+        },
+        "etenders_ie": {
+          "fetched": 500,
+          "status": "ok",
+          "scored": 3
+        }
+      }
+    }
+  },
+  {
     "timestamp": "2026-06-25T12:22:05.632674+00:00",
     "kind": "signals",
     "summary": {
