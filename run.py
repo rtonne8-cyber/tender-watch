@@ -1,4 +1,4 @@
-"""Orchestrator: run all Tier 1 fetchers, score the results, write data/tenders.json.
+"""Orchestrator: run all Tier 1/2 fetchers, score the results, write data/tenders.json.
 
 A broken source is logged and skipped — it must never fail the whole run.
 """
@@ -7,16 +7,17 @@ import json
 import sys
 from pathlib import Path
 
-from fetchers import contracts_finder, etenders_ie, fts
+from fetchers import contracts_finder, etenders_ie, fts, pcs_scotland
 from history import record_run
 from scoring.relevance import score_records
 
 DATA_PATH = Path(__file__).parent / "data" / "tenders.json"
 
-TIER1_FETCHERS = [
+FETCHERS = [
     ("find_a_tender", fts.fetch),
     ("contracts_finder", contracts_finder.fetch),
     ("etenders_ie", etenders_ie.fetch),
+    ("pcs_scotland", pcs_scotland.fetch),
 ]
 
 
@@ -24,7 +25,7 @@ def run():
     all_records = []
     summary = {}
 
-    for name, fetch_fn in TIER1_FETCHERS:
+    for name, fetch_fn in FETCHERS:
         try:
             records = fetch_fn()
             summary[name] = {"fetched": len(records), "status": "ok"}

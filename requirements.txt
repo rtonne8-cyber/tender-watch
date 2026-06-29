@@ -2,3 +2,4 @@ anthropic
 requests
 pyyaml
 feedparser
+beautifulsoup4

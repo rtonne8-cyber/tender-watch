@@ -6,10 +6,14 @@ plus early trade-press signals. Zero manual portal-checking.
 
 ## Locked scope — do not relitigate
 - Tier 1 (OCDS APIs): Find a Tender, Contracts Finder, eTenders Ireland.
-- Tier 2 (RSS, headline+link only): PCS Scotland.
+- Tier 2 (HTML scrape via keyword-search POST replay): PCS Scotland (live,
+  fetchers/pcs_scotland.py — no public API/RSS for notices on this site).
+  Sell2Wales planned next, same scrape pattern (verified working, not yet built).
 - Tier 3 (RSS, SIGNAL ONLY): Utility Week, Current±, reNEWS, Utility Dive.
   Tier 3 must NEVER render or score as a confirmed notice.
 - PARKED, out of scope: NGET, SSEN-T, SPT, EirGrid, ESBN (login-gated, no public feed).
+  Also PARKED: Carbon Trust (carbontrust.com/tenders has no RSS/API/dates — email
+  newsletter signup only, nothing machine-readable to fetch).
   Do not attempt to build these.
 - Do NOT fold in the BD Pipeline Intelligence Agent. Different project.
 
