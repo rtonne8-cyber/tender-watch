@@ -7,7 +7,7 @@ import json
 import sys
 from pathlib import Path
 
-from fetchers import contracts_finder, etenders_ie, fts, pcs_scotland
+from fetchers import contracts_finder, etenders_ie, fts, pcs_scotland, sell2wales
 from history import record_run
 from scoring.relevance import score_records
 
@@ -18,6 +18,7 @@ FETCHERS = [
     ("contracts_finder", contracts_finder.fetch),
     ("etenders_ie", etenders_ie.fetch),
     ("pcs_scotland", pcs_scotland.fetch),
+    ("sell2wales", sell2wales.fetch),
 ]
 
 
